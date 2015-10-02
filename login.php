@@ -14,7 +14,7 @@
     $ergebnis = mysql_query($abfrage);
     $row = mysql_fetch_object($ergebnis);
 
-    if($row->passwort == $passwort)
+    if($row->Password == $passwort)
         {
         $_SESSION["username"] = $username;
         echo "Login erfolgreich. <br> <a href=\"profile.php\">Zum Profiel</a>";
