@@ -1,8 +1,8 @@
 <?php
 
-    session_start();
+   session_start(); 
 
-    include(profile.html);
     echo $_SESSION["username"];
+    include(profile.html);
 
 ?>
