@@ -21,7 +21,7 @@
 
     if($menge == 0)
         {
-        $eintrag = "INSERT INTO login (Username, Password) VALUES ('$username', '$passwort')";
+        $eintrag = "INSERT INTO Login (Username, Password) VALUES ('$username', '$passwort')";
         $eintragen = mysql_query($eintrag);
 
         if($eintragen == true)
