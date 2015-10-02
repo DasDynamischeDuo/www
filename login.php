@@ -21,9 +21,10 @@
         }
     else
         {
-        print $row->Password;
+        print $row;
         print "<br>";
         print $passwort;
+        print "<br>";
         echo "Benutzername und/oder Passwort waren falsch. <a href=\"index.html\">Login</a>";
         }
 
