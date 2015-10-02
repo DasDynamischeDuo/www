@@ -5,7 +5,7 @@
 <?php
     $verbindung = mysql_connect("localhost", "root" , "1234.abcd")
         or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
-    mysql_select_db("Login") or die ("Datenbank konnte nicht ausgewählt werden");
+    mysql_select_db("test") or die ("Datenbank konnte nicht ausgewählt werden");
 
     $username = $_POST["username"];
     $passwort = md5($_POST["password"]);

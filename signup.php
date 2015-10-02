@@ -30,7 +30,7 @@
             }
         else
             {
-            echo "Fehler beim Speichern des Benutzernames. <a href=\"eintragen.html\">Zurück</a>";
+            echo "Fehler beim Speichern des Benutzernames. <a href=\"signup.html\">Zurück</a>";
             }
 
 
@@ -38,6 +38,6 @@
 
     else
         {
-        echo "Benutzername schon vorhanden. <a href=\"eintragen.html\">Zurück</a>";
+        echo "Benutzername schon vorhanden. <a href=\"index.html\">Zurück</a>";
         }
 ?> 
