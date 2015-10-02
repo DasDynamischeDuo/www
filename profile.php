@@ -2,7 +2,7 @@
 
     session_start();
 
-    include(profile.php);
+    include(profile.html);
     echo $_SESSION["username"];
 
 ?>
