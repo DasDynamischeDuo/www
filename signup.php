@@ -16,7 +16,7 @@
         }
     $passwort = md5($passwort);
 
-    $result = mysql_query("SELECT id FROM login WHERE username LIKE '$username'");
+    $result = mysql_query("SELECT ID FROM login WHERE username LIKE '$username'");
     $menge = mysql_num_rows($result);
 
     if($menge == 0)

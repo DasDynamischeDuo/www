@@ -20,7 +20,6 @@
     }
     else
     {
-        include(profile.html);
         echo "Benutzername und/oder Passwort waren falsch. <a href=\"index.html\">Login</a>";
     }
     
