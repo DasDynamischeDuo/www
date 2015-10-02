@@ -23,7 +23,7 @@
         }
     else
         {
-        print $test;
+        print "test: " . $test;
         print "<br>";
         print $passwort;
         print "<br>";
