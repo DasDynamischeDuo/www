@@ -25,4 +25,6 @@
         echo "Benutzername und/oder Passwort waren falsch. <a href=\"index.html\">Login</a>";
         }
 
+    session_register_shutdown();
+
 ?> 
