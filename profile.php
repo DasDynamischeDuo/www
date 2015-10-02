@@ -4,6 +4,9 @@
 
 
 <?php
+        
+        print "test";
+        
         $username = $_SESSION["username"];
 
         $connection = mysql_connect("localhost", "root", "1234.abcd");
