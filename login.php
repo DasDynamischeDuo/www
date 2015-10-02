@@ -14,7 +14,7 @@
     $ergebnis = mysql_query($abfrage);
     $row = mysql_fetch_object($ergebnis);
 
-    $test = $row->Password;
+    $test = $row->passwort;
 
     if($test == $passwort)
         {
