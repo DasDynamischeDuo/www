@@ -16,7 +16,7 @@
         }
     $passwort = md5($passwort);
 
-    $result = mysql_query("SELECT ID FROM login WHERE username LIKE '$username'");
+    $result = mysql_query("SELECT ID FROM Login WHERE Username LIKE '$username'");
     $menge = mysql_num_rows($result);
 
     if($menge == 0)
@@ -32,8 +32,6 @@
             {
             echo "Fehler beim Speichern des Benutzernames. <a href=\"signup.html\">Zurück</a>";
             }
-
-
         }
 
     else
