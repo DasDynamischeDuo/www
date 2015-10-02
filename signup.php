@@ -26,7 +26,7 @@
 
         if($eintragen == true)
             {
-            echo "Benutzername <b>$username</b> wurde erstellt. <a href=\"login.html\">Login</a>";
+            echo "Benutzername <b>$username</b> wurde erstellt. <a href=\"index.html\">Login</a>";
             }
         else
             {
