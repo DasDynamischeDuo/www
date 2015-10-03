@@ -77,6 +77,20 @@
 
 input[type=submit] {
     
-    width:100px;
+    width:80px;
+       
+}
+
+
+input[type=text] {
+    
+    background-color:orange;
+       
+}
+
+
+input[type=password] {
+    
+    background-color:orange;
        
 }
