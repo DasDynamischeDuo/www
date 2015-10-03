@@ -1,20 +1,83 @@
 #login {
       
-    padding: 1em;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 1em auto;
-    clear:both;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0 auto;
+    top: 100px;
+
+
 }
 
 #header {
     
     background-color:darkorange;
     width: 600px;
-    position: relative;
+    position: absolute;
     text-align: center;
     padding: 10px;
-    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin: 10 auto;
 
+}
+
+
+#wrapper {
+    
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color:darkcyan;
+    clear: both;
+    width: 1000px;
+    height: 460px;
+    
+}
+
+
+#rightBar {
+    
+    float:right;
+    background-color: orange;
+    height:400px;
+    width:150px;
+    margin:10px;
+    
+}
+
+#leftBar {
+    
+    float:left;
+    background-color:orange;
+    height:400px;
+    width:150px;
+    margin:10px;
+}
+
+#footer {
+    
+    background-color:darkorange;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+
+    
+}
+
+
+
+input[type=submit] {
+    
+    width:100px;
+       
 }
