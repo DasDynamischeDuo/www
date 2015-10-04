@@ -37,6 +37,7 @@
         if($quantity == 0)
             {
                 $query = "INSERT INTO Adress (Adress, ZIP) VALUES ('$adress', '$zip')";
+                mysql_query($query);
             }
                 $query = "SELECT ID FROM Adress WHERE ZIP = '$ZIP'";
                 $result = mysql_query($query);
