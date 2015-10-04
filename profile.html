@@ -20,6 +20,24 @@
                 </div>
 
                 <div id="content">
+  
+                </div>
+                
+                <div id="footer">
+                
+                </div>
+            </div>
+        </body>
+    </html>
+
+/*
+Ad.Adress, Ad.ZIP, 
+, Adress Ad
+ AND Ac.Adress = Ad.ID LIMIT 1
+
+$row = mysql_fetch_object($result);
+$result = mysql_query($query) or die('Error updating database: '.mysql_error());
+
             <?php
                     $connection = mysql_connect ("localhost:3306", "default") or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
                     mysql_select_db("Accounts") or die("Database not found");
@@ -46,21 +64,7 @@
                     print "Zip Code: " . $zip . "<br>";
                     print "About Me: " . $AboutMe . "<br>";
 
-            ?>    
-                </div>
-                
-                <div id="footer">
-                
-                </div>
-            </div>
-        </body>
-    </html>
+            ?>  
 
-/*
-Ad.Adress, Ad.ZIP, 
-, Adress Ad
- AND Ac.Adress = Ad.ID LIMIT 1
 
-$row = mysql_fetch_object($result);
-$result = mysql_query($query) or die('Error updating database: '.mysql_error());
 */
