@@ -16,7 +16,8 @@
     if($row->Password == $passwort)
     {
         $_SESSION["username"] = $username;
-        include("profile.php")
+        header("profile.php");
+        exit();
     }
     else
     {
