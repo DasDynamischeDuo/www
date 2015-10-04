@@ -24,7 +24,14 @@
                     <?php
                         $connection = mysql_connect("localhost:3306", "default") or die("Connection refused");
                         mysql_select_db("Accounts") or die("Database not found");
+                
+                            $username = $_SESSION["username"];
 
+                            $query = "SELECT * FROM Accounts WHERE Username LIKE $username";
+                            $result = mysql_query($query);
+                            $row = mysql_fetch_object($result);
+
+                            print row;
                     ?>  
 
   
