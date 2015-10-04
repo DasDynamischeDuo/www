@@ -27,10 +27,9 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query ="SELECT Ac.ID, Ac.Email, Ac.Birthday, Ac.AboutMe, Ad.Adress, Ad.ZIP
-                                     FROM Account Ac, Adress Ad
+                            $query ="SELECT ID, Email, Birthday, AboutMe
+                                     FROM Account
                                      WHERE Username LIKE 'Mr. Robot'
-                                     AND Ad.Adress = Ac.ID
                                      LIMIT 0 , 30";
 
                             $result = mysql_query($query);
