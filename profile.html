@@ -22,11 +22,11 @@
                 <div id="content">
             <?php
                     $connection = mysql_connect ("localhost:3306", "default") or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
-                    mysql_select_db("Account") or die("Database not found");
+                    mysql_select_db("Accounts") or die("Database not found");
 
                     $username = $_SESSION["username"];
 
-                    $abfrage = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Accounts WHERE Username LIKE '$username' LIMIT 1";
+                    $abfrage = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE '$username' LIMIT 1";
                     $ergebnis = mysql_query($abfrage);
                     $row = mysql_fetch_object($ergebnis);
                     
@@ -36,7 +36,7 @@
                     $adressId = $row->Adress;
                     $AboutMe = $row->AboutMe;
 
-                    $abfrage = "SELECT Adress, ZIP FROM Adress WHERE ID = '$ID' LIMIT 1";
+                    $abfrage = "SELECT Adress, ZIP FROM Adress WHERE ID = '$ID'";
                     $ergebnis = mysql_query($abfrage);
                     $row = mysql_fetch_object($ergebnis);
                     $adress = $row->Adress;

@@ -2,7 +2,7 @@
     $connection = mysql_connect("localhost:3306", "default")
         or die("Connection to Database refused");
 
-    mysql_select_db("Account")
+    mysql_select_db("Accounts")
         or die ("Database not found");
 
     $username = $_POST["username"];
@@ -21,9 +21,12 @@
         exit;
         }
     $password = md5($password);
-
+                $query = "SELECT ID FROM Adress WHERE Adress = '$adress'";
+                $result = mysql_query($query);
+                $row = mysql_fetch_object($result);
+                $adressId = $row->ID;
     
-    $result = mysql_query("SELECT ID FROM Accounts WHERE Username LIKE '$username'");
+    $result = mysql_query("SELECT ID FROM Account WHERE Username LIKE '$username'");
     $quantity = mysql_num_rows($result);
 
     if($quantity == 0)
@@ -42,7 +45,7 @@
        
        
        
-        $query = "INSERT INTO Accounts (Username, Password, Email, Brithday, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
+        $query = "INSERT INTO Account (Username, Password, Email, Brithday, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
         $result = mysql_query($query);
 
         if($result == true)
