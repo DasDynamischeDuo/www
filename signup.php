@@ -42,7 +42,7 @@
                 $query = "SELECT ID FROM Adress WHERE ZIP = '$ZIP'";
                 $result = mysql_query($query);
                 $row = mysql_fetch_row($result);
-                $adressId = $row[0];
+                $adressId = $row[2];
        
        
        
