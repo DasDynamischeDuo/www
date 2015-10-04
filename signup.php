@@ -30,7 +30,7 @@
         $result = mysql_query("SELECT ID FROM Login WHERE Username LIKE '$username'");
         $quantity = mysql_num_rows($result);
 
-        if($quantity == 0
+        if($quantity == 0)
             {
                 $query = "INSERT INTO Adress (Adress, Zip) VALUESE ('$adress', '$zip')";
             }
