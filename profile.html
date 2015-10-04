@@ -28,7 +28,7 @@
 
                     $query = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE '$username'";
                     $result = mysql_query($query) or die('Error updating database: '.mysql_error());
-                    $row = mysql_fetch_object($result);
+                    
                     
                     $ID = $row->ID;
                     $Email = $row->Email;
