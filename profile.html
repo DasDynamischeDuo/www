@@ -27,13 +27,13 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query = "SELECT Email FROM Accounts WHERE Username LIKE $username";
+                            $query = "SELECT Ac.Email, Ad.Adress FROM Account Ac, Adress Ad WHERE Username LIKE $username LIMIT 0 , 30";
                             $result = mysql_query($query);
                             $row = mysql_fetch_object($result);
                             
                             print $username;
                             print $row->Email;
-                            print $row->Adress;
+                            print $row->Adress
                     ?>  
 
   
