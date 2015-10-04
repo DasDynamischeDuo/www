@@ -52,7 +52,7 @@
             {
             echo "Error while saving User. <a href=\"signup.html\">Try again!</a>";
             
-                    print "Password: " . $password . "<br>";
+                    print "<br>Password: " . $password . "<br>";
                     print "Username: " . $username . "<br>";
                     print "Email: " . $email . "<br>";
                     print "Birthday: " . $birthday . "<br>";
