@@ -26,9 +26,9 @@
 
                     $username = $_SESSION["username"];
 
-                    $abfrage = "SELECT Ad.Adress, Ad.ZIP, Ac.ID, Ac.Email, Ac.Birthday, Ac.Adress, Ac.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE '$username' AND Ac.Adress = Ad.ID LIMIT 1";
-                    $ergebnis = mysql_query($abfrage);
-                    $row = mysql_fetch_object($ergebnis);
+                    $query = "SELECT Ad.Adress, Ad.ZIP, Ac.ID, Ac.Email, Ac.Birthday, Ac.Adress, Ac.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE '$username' AND Ac.Adress = Ad.ID LIMIT 1";
+                    $result = mysql_query($query) or die('Error updating database: '.mysql_error());
+                    $row = mysql_fetch_object($result);
                     
                     $ID = $row->ID;
                     $Email = $row->Email;
