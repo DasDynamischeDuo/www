@@ -30,9 +30,10 @@
                             $query = "SELECT Ac.Email, Ad.Adress FROM Accounts Ac, Adress Ad WHERE Username LIKE $username";
                             $result = mysql_query($query);
                             $row = mysql_fetch_object($result);
-
+                            
+                            print $username;
                             print $row->Email;
-                            print $row->Adress
+                            print $row->Adress;
                     ?>  
 
   
