@@ -27,22 +27,17 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query ="SELECT ID, Email, Birthday, AboutMe
-                                     FROM Account
-                                     WHERE Username LIKE 'Mr. Robot'
-                                     LIMIT 0 , 30";
-
+                            $query = "SELECT Email FROM Account WHERE Username LIKE 'Mr. Robot'";
                             $result = mysql_query($query);
                             $row = mysql_fetch_row($result);
                             
                             $email = $row->Email;
                             
-                            print "Username: . "$username . "<br>";
-                            print "ID: " . $row[0] . "<br>";
-
+                            print $username;
+                            print $row;
                     ?>  
-                    
-                    
+
+  
                 </div>
                 
                 <div id="footer">
