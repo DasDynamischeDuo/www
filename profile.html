@@ -26,7 +26,7 @@
 
                     $username = $_SESSION["username"];
 
-                    $query = "SELECT Ac.ID, Ac.Email, Ac.Birthday, Ac.Adress, Ac.AboutMe FROM Account Ac WHERE Username LIKE '$username'";
+                    $query = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE '$username'";
                     $result = mysql_query($query) or die('Error updating database: '.mysql_error());
                     $row = mysql_fetch_object($result);
                     
