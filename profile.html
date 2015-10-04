@@ -27,7 +27,7 @@
                     $username = $_SESSION["username"];
 
                     $query = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE '$username'";
-                    $result = mysql_query($query) or die('Error updating database: '.mysql_error());
+                   
                     
                     
                     $ID = $row->ID;
@@ -60,4 +60,7 @@
 Ad.Adress, Ad.ZIP, 
 , Adress Ad
  AND Ac.Adress = Ad.ID LIMIT 1
+
+$row = mysql_fetch_object($result);
+$result = mysql_query($query) or die('Error updating database: '.mysql_error());
 */
