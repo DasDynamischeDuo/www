@@ -1,5 +1,5 @@
  <?php
-    $verbindung = mysql_connect("localhost", "root" , "1234.abcd")
+    $verbindung = mysql_connect("localhost:3306", "default")
         or die("Connection to Database refused");
 
     mysql_select_db("Account")
@@ -23,11 +23,11 @@
 
     
     $result = mysql_query("SELECT ID FROM Accounts WHERE Username LIKE '$username'");
-    $menge = mysql_num_rows($result);
+    $quantity = mysql_num_rows($result);
 
-    if($menge == 0)
+    if($quantity == 0)
         {
-        $result = mysql_query("SELECT ID FROM Adress WHERE ZIP LIKE '$zip'");
+        $result = mysql_query("SELECT ID FROM Adress WHERE ZIP = '$zip'");
         $quantity = mysql_num_rows($result);
 
         if($quantity == 0)
