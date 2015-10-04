@@ -21,7 +21,7 @@
         exit;
         }
     $password = md5($password);
-                $query = "SELECT ID FROM Adress WHERE Adress = '$adress'";
+                $query = "SELECT ID FROM Adress WHERE ZIP = '$zip'";
                 $result = mysql_query($query);
                 $row = mysql_fetch_object($result);
                 $adressId = $row->ID;
@@ -45,7 +45,7 @@
        
        
        
-        $query = "INSERT INTO Account (Username, Password, Email, Brithday, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
+        $query = "INSERT INTO Account (Username, Password, Email, Birthday, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
         $result = mysql_query($query);
 
         if($result == true)

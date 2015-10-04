@@ -27,7 +27,7 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query = "SELECT Ac.ID, Ac.Email, Ac.Birthday, Ad.Adress, Ad.ZIP, Ac.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE 'Mr. Robot' AND Ac.Adress = Ad.ID";
+                            $query = "SELECT Ac.ID, Ac.Email, Ac.Birthday, Ad.Adress, Ad.ZIP, Ac.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE '$username' AND Ac.Adress = Ad.ID";
                             $result = mysql_query($query);
                             $row = mysql_fetch_row($result);
                             
