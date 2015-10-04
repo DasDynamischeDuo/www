@@ -44,7 +44,7 @@
                 $row = mysql_fetch_row($result);
                 $array = array($row);
                 print_r(array_values($array));
-                $adressId = $row[1];
+                $adressId = $row[0];
        
        
        
