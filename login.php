@@ -2,7 +2,7 @@
     session_start();
 
    
-    $verbindung = mysql_connect("localhost", mysql.default_user, mysql.default_user)
+    $verbindung = mysql_connect("localhost", "roor", "1234.abcd")
         or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
     mysql_select_db("test") or die ("Datenbank konnte nicht ausgewählt werden");
 
