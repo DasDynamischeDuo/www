@@ -42,8 +42,6 @@
                 $query = "SELECT ID FROM Adress WHERE ZIP = '$zip'";
                 $result = mysql_query($query);
                 $row = mysql_fetch_row($result);
-                $array = array($row);
-                print_r(array_values($array));
                 $adressId = $row[0];
        
        
