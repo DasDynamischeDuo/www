@@ -2,8 +2,8 @@
     session_start();
 
    
-    $connection = mysql_connect (ini_get("mysql.default_host"), ini_get("mysql.default_user"), ini_get("mysql.default_password")) or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
-    mysql_select_db("test") or die ("Datenbank konnte nicht ausgewählt werden");
+    $connection = mysql_connect ("localhost", ini_get("mysql.default_user"), ini_get("mysql.default_password")) or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
+    mysql_select_db("test") or die("Datenbank konnte nicht ausgewählt werden");
 
     $username = $_POST["username"];
     $passwort = md5($_POST["password"]);
