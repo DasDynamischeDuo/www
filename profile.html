@@ -21,7 +21,26 @@
 
                 <div id="content">
             <?php
-                print "Username: " . $_SESSION["username"];
+                    $connection = mysql_connect ("localhost:3306", "default") or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
+                    mysql_select_db("Account") or die("Database not found");
+
+                    $username = $_SESSION["username"];
+
+                    $abfrage = "SELECT ID, Email, Birthday, AboutMe FROM Accounts WHERE Username LIKE '$username' LIMIT 1";
+                    $ergebnis = mysql_query($abfrage);
+                    $row = mysql_fetch_object($ergebnis);
+                    
+                    $ID = $row->ID;
+                    $Email = $row->Email;
+                    $Birthday = $row->Birthday;
+                    $AboutMe = $row->AboutMe;
+
+                    print "ID: " . $ID . "<br>";
+                    print "Username: " . $_SESSION["username"] . "<br>";
+                    print "Email: " . $Email . "<br>";
+                    print "Birthday: " . $Birthday . "<br>";
+                    print "About Me: " . $AboutMe . "<br>";
+
             ?>    
                 </div>
                 
