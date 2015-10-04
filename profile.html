@@ -31,9 +31,10 @@
                             $result = mysql_query($query);
                             $row = mysql_fetch_object($result);
                             
+                            $email = $row->Email;
+
                             print $username;
-                            print $row->Email;
-                            print $row->Adress
+                            print $email;
                     ?>  
 
   
