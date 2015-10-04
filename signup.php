@@ -55,14 +55,6 @@
         else
             {
             echo "Error while saving User. <a href=\"signup.html\">Try again!</a>";
-            localhost:3306
-                    print "<br>Password: " . $password . "<br>";
-                    print "Username: " . $username . "<br>";
-                    print "Email: " . $email . "<br>";
-                    prlocalhost:3306int "Birthday: " . $birthday . "<br>";
-                    print "About Me: " . $aboutMe . "<br>";
-                    print "About Me: " . $adressId . "<br>";
-            localhost:3306
             }
         }
 
