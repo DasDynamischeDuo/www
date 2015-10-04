@@ -26,7 +26,7 @@
 
                     $username = $_SESSION["username"];
 
-                    $abfrage = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE '$username' LIMIT 1";
+                    $abfrage = "SELECT Ad.Adress, Ad.ZIP, Ac.ID, Ac.Email, Ac.Birthday, Ac.Adress, Ac.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE '$username' AND Ac.Adress = Ad.ID LIMIT 1";
                     $ergebnis = mysql_query($abfrage);
                     $row = mysql_fetch_object($ergebnis);
                     
@@ -35,10 +35,6 @@
                     $Birthday = $row->Birthday;
                     $adressId = $row->Adress;
                     $AboutMe = $row->AboutMe;
-
-                    $abfrage = "SELECT Adress, ZIP FROM Adress WHERE ID = '$ID'";
-                    $ergebnis = mysql_query($abfrage);
-                    $row = mysql_fetch_object($ergebnis);
                     $adress = $row->Adress;
                     $zip = $row->ZIP
 
