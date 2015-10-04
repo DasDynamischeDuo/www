@@ -20,6 +20,7 @@
     }
     else
     {
+        echo $username . " " . $password;
         echo "Benutzername und/oder Passwort waren falsch. <a href=\"index.html\">Login</a>";
     }
     
