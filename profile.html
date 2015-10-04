@@ -27,13 +27,13 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query = "SELECT ID, Email, Birthday, Adress, AboutMe FROM Account WHERE Username LIKE 'Mr. Robot'";
+                            $query = "SELECT Ac.ID, Ac.Email, Ac.Birthday, Ad.Adress, Ad.ZIP, Ad.AboutMe FROM Account Ac, Adress Ad WHERE Username LIKE 'Mr. Robot' AND Ad.ZIP = Ac.ID";
                             $result = mysql_query($query);
                             $row = mysql_fetch_row($result);
                             
 
                             print "ID: " . $row[0] . "<br>";
-                            print "Username: " . $username; 
+                            print "Username: " . $username . "<br>"; 
                             print "Email: " . $row[1] . "<br>";
                             print "Birthday: " . $row[2] . "<br>";
                             print "Adress: " . $row[3] . "<br>";
