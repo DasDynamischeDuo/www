@@ -41,6 +41,21 @@
 }
 
 
+#wrapper2 {
+    
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color:darkcyan;
+    clear: both;
+    width: 900px;
+    height: 720px;
+    
+}
+
+
 #rightBar {
     
     float:right;
@@ -56,6 +71,25 @@
     float:left;
     background-color:orange;
     height:400px;
+    width:150px;
+    margin:10px;
+}
+
+#rightBar2 {
+    
+    float:right;
+    background-color: orange;
+    height:660px;
+    width:150px;
+    margin:10px;
+    
+}
+
+#leftBar2 {
+    
+    float:left;
+    background-color:orange;
+    height:660px;
     width:150px;
     margin:10px;
 }

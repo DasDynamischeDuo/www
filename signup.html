@@ -1,25 +1,67 @@
 <!DOCTYPE HTML>
     <html>
         <head>
-        
+             <link rel="stylesheet" href="style.css" type="text/css">
+            <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         </head>
         
-        <body>
-            <h1>Sign Up</h1>
-            <form action="signup.php" method="post">
-                    Dein Username:<br>
-                    <input type="text" size="24" maxlength="50"
-                    name="username"><br><br>
+        <body style="background-color:lightgray">
+            
+            <div id="wrapper2">
+                <div id="rightBar2">                
+                
+                </div>
+                
+                <div id="leftBar2">
+                
+                </div>
+                
+                <div id="header">
+                    <h1>Sign Up</h1>
+                </div>
+                
+                <div id="login">
+                    <form action="signup.php" method="post">
+                        Username:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="username"><br><br>
 
-                    Dein Passwort:<br>
-                    <input type="password" size="24" maxlength="50"
-                    name="passwort"><br>
+                        Password:<br>
+                        <input type="password" size="24" maxlength="50"
+                        name="passwort"><br><br>
 
-                    Passwort wiederholen:<br>
-                    <input type="password" size="24" maxlength="50"
-                    name="passwort2"><br>
-
-                    <input type="submit" value="Abschicken">
-                </form>
+                        Repeat Password:<br>
+                        <input type="password" size="24" maxlength="50"
+                        name="passwort2"><br>
+                        <br>
+                        
+                        Email:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="email"><br><br>
+                        
+                        Birthday:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="brithday"><br><br>
+                        
+                        Adress:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="adress"><br><br>
+                        
+                        ZIP code:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="zip"><br><br>
+                        
+                        About Me:<br>
+                        <input type="text" size="24" maxlength="50"
+                        name="aboutMe"><br><br>
+                        
+                        <input style="float:left" type="submit" class="btn btn-warning" value="Sign Up">
+                    </form>
+                </div>
+                
+                <div id="footer">
+                
+                </div>
+            </div>
         </body>
     </html>

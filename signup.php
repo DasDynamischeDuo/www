@@ -1,41 +1,61 @@
  <?php
     $verbindung = mysql_connect("localhost", "root" , "1234.abcd")
-        or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
+        or die("Connection to Database refused");
 
     mysql_select_db("test")
-        or die ("Datenbank konnte nicht ausgewaehlt werden");
+        or die ("Database not found");
 
     $username = $_POST["username"];
-    $passwort = $_POST["passwort"];
-    $passwort2 = $_POST["passwort2"];
+    $password = $_POST["passwort"];
+    $password2 = $_POST["passwort2"];
+    $email = $_POST["email"];
+    $birthday = $_POST["birthday"];
+    $adress = $_POST["adress"];
+    $zip = $_POST["zip"];
+    $aboutMe = $_POST["aboutMe"];
 
-    if($passwort != $passwort2 OR $username == "" OR $passwort == "")
+    if($password != $password2 OR $username == "" OR $passwort == "")
         {
-        echo "Eingabefehler. Bitte alle Felder korekt ausfüllen. <a href=\"eintragen.html\">Zurück</a>";
+        echo "Input error. <a href=\"signup.html\">Try again</a>";
         exit;
         }
-    $passwort = md5($passwort);
+    $password = md5($password);
 
+    
     $result = mysql_query("SELECT ID FROM Login WHERE Username LIKE '$username'");
     $menge = mysql_num_rows($result);
 
     if($menge == 0)
         {
-        $eintrag = "INSERT INTO Login (Username, Password) VALUES ('$username', '$passwort')";
-        $eintragen = mysql_query($eintrag);
+        $result = mysql_query("SELECT ID FROM Login WHERE Username LIKE '$username'");
+        $quantity = mysql_num_rows($result);
 
-        if($eintragen == true)
+        if($quantity == 0
             {
-            echo "Benutzername <b>$username</b> wurde erstellt. <a href=\"index.html\">Login</a>";
+                $query = "INSERT INTO Adress (Adress, Zip) VALUESE ('$adress', '$zip')";
+            }
+                $query = "SELECT ID FROM Adress WHERE Adress = '$adress'";
+                $result = mysql_query($query);
+                $row = mysql_fetch_object($result);
+                $adressId = $row->ID;
+       
+       
+       
+        $query = "INSERT INTO Login (Username, Password, Email, Brithday, Adress, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
+        $result = mysql_query($query);
+
+        if($result == true)
+            {
+            echo "User <b>$username</b> was created. <a href=\"index.html\">Login</a>";
             }
         else
             {
-            echo "Fehler beim Speichern des Benutzernames. <a href=\"signup.html\">Zurück</a>";
+            echo "Error while saving User. <a href=\"signup.html\">Try again!</a>";
             }
         }
 
     else
         {
-        echo "Benutzername schon vorhanden. <a href=\"index.html\">Zurück</a>";
+        echo "Username is already Used. <a href=\"index.html\">Try again!</a>";
         }
 ?> 
