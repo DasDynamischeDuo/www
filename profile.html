@@ -22,7 +22,8 @@
                 <div id="content">
                     
                     <?php
-                         $connection = mysql_connect("localhost:3306", "default") or die("Connection refused");
+                        $connection = mysql_connect("localhost:3306", "default") or die("Connection refused");
+                        mysql_select_db("Accounts") or die("Database not found");
 
                     ?>  
 
