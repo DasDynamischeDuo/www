@@ -37,7 +37,8 @@
                             print $email;
                             print $username;
                             print $row;
-                            print $row["Email"];
+                            $array = array($row);
+                            print_r(array_values($array));
                     ?>  
 
   
