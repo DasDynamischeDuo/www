@@ -27,7 +27,12 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query = "SELECT Ad.ID, Ad.Email, Ad.Birthday, Ad.AboutMe, Ac.Adress, Ac.ZIP FROM Account Ac, Adress Ad WHERE Username LIKE 'Mr. Robot' AND Ad.Adress = Ac.ID";
+                            $query ="SELECT Ad.ID, Ac.Email, Ac.Birthday, Ac.AboutMe,                                        Ad.Adress, Ad.ZIP
+                                     FROM Account Ac, Adress Ad
+                                     WHERE Username LIKE 'Mr. Robot'
+                                     AND Ad.Adress = Ac.ID
+                                     LIMIT 0 , 30";
+
                             $result = mysql_query($query);
                             $row = mysql_fetch_row($result);
                             
@@ -40,6 +45,7 @@
                             print "Adress: " . $row[4] . "<br>";
                             print "ZIP: " . $row[5] . "<br>";
                             print "About Me: " . $row[3] . "<br>";
+
                     ?>  
 
   
