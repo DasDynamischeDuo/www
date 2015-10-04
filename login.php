@@ -6,13 +6,13 @@
     mysql_select_db("Account") or die("Datenbank konnte nicht ausgewählt werden");
 
     $username = $_POST["username"];
-    $passwort = md5($_POST["password"]);
+    $password = md5($_POST["password"]);
 
     $abfrage = "SELECT Username, Password FROM Accounts WHERE Username LIKE '$username' LIMIT 1";
     $ergebnis = mysql_query($abfrage);
     $row = mysql_fetch_object($ergebnis);
 
-    if($row->Password == $passwort)
+    if($row->Password == $password)
     {
         $_SESSION["username"] = $username;
         header("Location: http://mytastypi.ddns.net/profile.php");
