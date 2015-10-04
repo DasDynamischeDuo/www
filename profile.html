@@ -27,7 +27,7 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query ="SELECT Ac.ID, Ac.Email, Ac.Birthday, Ac.AboutMe,                                        Ad.Adress, Ad.ZIP
+                            $query ="SELECT Ac.ID, Ac.Email, Ac.Birthday, Ac.AboutMe, Ad.Adress, Ad.ZIP
                                      FROM Account Ac, Adress Ad
                                      WHERE Username LIKE 'Mr. Robot'
                                      AND Ad.Adress = Ac.ID
@@ -40,11 +40,7 @@
                             
                             print "Username: . "$username . "<br>";
                             print "ID: " . $row[0] . "<br>";
-                            print "Email: " . $row[1] . "<br>";
-                            print "Birthday: " . $row[2] . "<br>";
-                            print "Adress: " . $row[4] . "<br>";
-                            print "ZIP: " . $row[5] . "<br>";
-                            print "About Me: " . $row[3] . "<br>";
+    
 
                     ?>  
 
