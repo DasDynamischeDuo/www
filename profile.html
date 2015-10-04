@@ -29,10 +29,6 @@
 
                             $query = "SELECT Email FROM Account WHERE Username LIKE 'Mr. Robot'";
                             $result = mysql_query($query);
-                            if($result == 0) {
-                            print "test";
-}
-                            print $result;
                             $row = mysql_fetch_row($result);
                             
                             $email = $row->Email;
