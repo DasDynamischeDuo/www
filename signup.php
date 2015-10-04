@@ -39,7 +39,7 @@
                 $query = "INSERT INTO Adress (Adress, ZIP) VALUES ('$adress', '$zip')";
                 mysql_query($query);
             }
-                $query = "SELECT ID FROM Adress WHERE ZIP = '$ZIP'";
+                $query = "SELECT ID FROM Adress WHERE ZIP = '$zip'";
                 $result = mysql_query($query);
                 $row = mysql_fetch_row($result);
                 $adressId = $row[2];
