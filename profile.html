@@ -29,7 +29,7 @@
 
                             $query = "SELECT Ac.Email, Ad.Adress FROM Account Ac, Adress Ad WHERE Username LIKE $username LIMIT 0 , 30";
                             $result = mysql_query($query);
-                            $row = mysql_fetch_object($result);
+                            $row = mysql_fetch_row($result);
                             
                             $email = $row->Email;
 
