@@ -32,9 +32,11 @@
                             $row = mysql_fetch_row($result);
                             
                             $email = $row->Email;
-
+                            
+                            print $result;
+                            print $email;
                             print $username;
-                            print $row["Email"];
+                            print $row;
                     ?>  
 
   
