@@ -23,11 +23,11 @@
                     
                     <?php
                         $connection = mysql_connect("localhost:3306", "default") or die("Connection refused");
-                        mysql_select_db("Accounts") or die("Database not found");
+                        mysql_select_db("Accountjhs") or die("Database not found");
                 
                             $username = $_SESSION["username"];
 
-                            $query = "SELECT Email FROM Account WHERE Username LIKE $username LIMIT 0 , 30";
+                            $query = "SELECT Email FROM Account WHERE Username LIKE $username";
                             $result = mysql_query($query);
                             if($result == 0) {
                             print "test";
