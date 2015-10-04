@@ -41,7 +41,7 @@
        
        
        
-        $query = "INSERT INTO Accounts (Username, Password, Email, Brithday, Adress, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
+        $query = "INSERT INTO Accounts (Username, Password, Email, Brithday, Adress, AboutMe) VALUES ('$username', '$password', '$email', '$birthday', '$adressId', '$aboutMe')";
         $result = mysql_query($query);
 
         if($result == true)
@@ -57,7 +57,7 @@
                     print "Email: " . $email . "<br>";
                     print "Birthday: " . $birthday . "<br>";
                     print "About Me: " . $aboutMe . "<br>";
-                    print "About Me: " . $adress . "<br>";
+                    print "About Me: " . $adressId . "<br>";
             
             }
         }
