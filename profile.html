@@ -36,12 +36,6 @@
                     $adressId = $row->Adress;
                     $AboutMe = $row->AboutMe;
 
-                    $query = "SELECT Adress, ZIP FROM Adress WHERE ID = '$ID' LIMIT 1";
-                    $result = mysql_query($query);
-                    $row = mysql_fetch_object($result);
-                    $adress = $row->Adress;
-                    $zip = $row->ZIP
-
 
                     print "ID: " . $ID . "<br>";
                     print "Username: " . $_SESSION["username"] . "<br>";
