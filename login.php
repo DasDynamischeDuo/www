@@ -2,8 +2,7 @@
     session_start();
 
    
-    $verbindung = mysql_connect(mysql.default_host, mysql.default_user, mysql.default_password)
-        or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
+    $connection = mysql_connect ([ string $server = ini_get("mysql.default_host") [, string $username = ini_get("mysql.default_user") [, string $password = ini_get("mysql.default_password") [, bool $new_link = false [, int $client_flags = 0 ]]]]] ) or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
     mysql_select_db("test") or die ("Datenbank konnte nicht ausgewählt werden");
 
     $username = $_POST["username"];
