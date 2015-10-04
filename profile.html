@@ -6,7 +6,7 @@
         </head>
         
         <body style="background-color: lightgray">
-           <div id="wrapper">
+           <div id="wrapper2">
                 <div id="rightBar">                
                 
                 </div>
@@ -27,7 +27,7 @@
                 
                             $username = $_SESSION["username"];
 
-                            $query ="SELECT Ad.ID, Ac.Email, Ac.Birthday, Ac.AboutMe,                                        Ad.Adress, Ad.ZIP
+                            $query ="SELECT Ac.ID, Ac.Email, Ac.Birthday, Ac.AboutMe,                                        Ad.Adress, Ad.ZIP
                                      FROM Account Ac, Adress Ad
                                      WHERE Username LIKE 'Mr. Robot'
                                      AND Ad.Adress = Ac.ID
