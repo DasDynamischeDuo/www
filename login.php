@@ -16,7 +16,7 @@
     if($row->Password == $passwort)
     {
         $_SESSION["username"] = $username;
-        echo "Login erfolgreich. <br> <a href=\"profile.php\">Zum Profiel</a>";
+        include("profile.php")
     }
     else
     {
