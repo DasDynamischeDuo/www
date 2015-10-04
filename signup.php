@@ -14,7 +14,7 @@
     $zip = $_POST["zip"];
     $aboutMe = $_POST["aboutMe"];
 
-    if($password != $password2 OR $username == "" OR $passwort == "")
+    if($password != $password2 OR $username == "" OR $password == "")
         {
         echo "Input error. <a href=\"signup.html\">Try again</a>";
         exit;
