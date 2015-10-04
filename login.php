@@ -16,7 +16,7 @@
     if($row->Password == $passwort)
     {
         $_SESSION["username"] = $username;
-        header("profile.php");
+        header("Location: http://mytastypi.ddns.net/profile.php");
         exit();
     }
     else
