@@ -1,5 +1,5 @@
  <?php
-    $verbindung = mysql_connect("localhost:3306", "default")
+    $connection = mysql_connect("localhost:3306", "default")
         or die("Connection to Database refused");
 
     mysql_select_db("Account")
@@ -16,6 +16,7 @@
 
     if($password != $password2 OR $username == "" OR $password == "")
         {
+
         echo "Input error. <a href=\"signup.html\">Try again</a>";
         exit;
         }
@@ -51,14 +52,14 @@
         else
             {
             echo "Error while saving User. <a href=\"signup.html\">Try again!</a>";
-            
+            localhost:3306
                     print "<br>Password: " . $password . "<br>";
                     print "Username: " . $username . "<br>";
                     print "Email: " . $email . "<br>";
-                    print "Birthday: " . $birthday . "<br>";
+                    prlocalhost:3306int "Birthday: " . $birthday . "<br>";
                     print "About Me: " . $aboutMe . "<br>";
                     print "About Me: " . $adressId . "<br>";
-            
+            localhost:3306
             }
         }
 
