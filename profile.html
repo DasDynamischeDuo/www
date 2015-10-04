@@ -6,7 +6,7 @@
         </head>
         
         <body style="background-color: lightgray">
-           <div id="wrapper2">
+           <div id="wrapper">
                 <div id="rightBar">                
                 
                 </div>
@@ -20,8 +20,29 @@
                 </div>
 
                 <div id="content">
+                    
+                    <?php
+                        $connection = mysql_connect("localhost:3306", "default") or die("Connection refused");
+                        mysql_select_db("Accounts") or die("Database not found");
+                
+                            $username = $_SESSION["username"];
 
-  
+                            $query ="SELECT ID, Email, Birthday, AboutMe
+                                     FROM Account
+                                     WHERE Username LIKE 'Mr. Robot'
+                                     LIMIT 0 , 30";
+
+                            $result = mysql_query($query);
+                            $row = mysql_fetch_row($result);
+                            
+                            $email = $row->Email;
+                            
+                            print "Username: . "$username . "<br>";
+                            print "ID: " . $row[0] . "<br>";
+
+                    ?>  
+                    
+                    
                 </div>
                 
                 <div id="footer">
