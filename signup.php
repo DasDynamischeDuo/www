@@ -38,10 +38,10 @@
             {
                 $query = "INSERT INTO Adress (Adress, ZIP) VALUES ('$adress', '$zip')";
             }
-                $query = "SELECT ID FROM Adress WHERE Adress = '$adress'";
+                $query = "SELECT ID FROM Adress WHERE ZIP = '$ZIP'";
                 $result = mysql_query($query);
-                $row = mysql_fetch_object($result);
-                $adressId = $row->ID;
+                $row = mysql_fetch_row($result);
+                $adressId = $row[0];
        
        
        
