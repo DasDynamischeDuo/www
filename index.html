@@ -3,14 +3,16 @@
         <head>
             <link rel="stylesheet" href="style.css" type="text/css">
             <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script type="text/javascript" src="clock.js"></script>
+
             
-            <title>This is Evil</title>
+            <title>Welcome</title>
         </head>
         
-        <body style="background-color: lightgray">
+        <body style="background-color: lightgray"  onload="startTime()">
             <div id="wrapper">
-                <div id="rightBar">                
-                
+                <div id="rightBar">
+                        <div id="clock">Time: </div>
                 </div>
                 
                 <div id="leftBar">
@@ -43,7 +45,7 @@
                     </form>
                 </div>
                 <div id="footer">
-                
+                    Copyright &copy; MyTastyPi
                 </div>
             </div>
         </body>

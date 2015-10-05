@@ -36,7 +36,7 @@
     background-color:darkcyan;
     clear: both;
     width: 900px;
-    height: 460px;
+    height: 462px;
     
 }
 
@@ -51,7 +51,7 @@
     background-color:darkcyan;
     clear: both;
     width: 900px;
-    height: 720px;
+    height: 722px;
     
 }
 
@@ -99,7 +99,7 @@
     background-color:darkorange;
     position: absolute;
     text-align: center;
-    padding: 10px;
+    padding: 2px;
     left: 0;
     right: 0;
     bottom: 0px;   
