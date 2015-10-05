@@ -3,13 +3,35 @@
         <head>
             <link rel="stylesheet" href="style.css" type="text/css">
             <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            
+            <script>
+                function startTime() 
+                {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+                    var t = setTimeout(startTime, 500);
+                }
+                
+                function checkTime(i) 
+                {
+                    if (i < 10) {i = "0" + i};
+                    return i;
+                }
+            </script>
+            
+            
             <title>Your Profile</title>
         </head>
         
-        <body style="background-color: lightgray">
+        <body style="background-color: lightgray"  onload="startTime()">
            <div id="wrapper">
                 <div id="rightBar">                
-                
+                        <div id="clock">Time: </div>
                 </div>
                 
                 <div id="leftBar">
